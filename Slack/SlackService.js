@@ -5,14 +5,14 @@ var https = require('https');
 
 /* == Globals == */
 var API = {
-    region: 'INSERT YOUR REGION HERE', // the region code where you launched the stack
-    endpoint: 'INSERT YOUR API GATEWAY FQDN HERE INCLUDING THE HTTPS://' //i.e.: Something like ... https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com
+    region: 'us-east-2', // the region code where you launched the stack
+    endpoint: 'https://peanrt3md4.execute-api.us-east-2.amazonaws.com/ZombieWorkshopStage/' //i.e.: Something like ... https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com
 };
 
-var table = 'YOUR DYNAMODB USERS TABLE'; // Find this in the outputs of CFN
-var index = 'YOUR slackindex DYNAMODB INDEX NAME'; // slackindex for Users table. Find this in outputs of CFN 
+var table = 'RR-zombiestack-users'; // Find this in the outputs of CFN
+var index = 'RR-zombiestack-slackindex'; // slackindex for Users table. Find this in outputs of CFN 
 
-var token = "INSERT YOUR TOKEN FROM SLACK HERE"; // INSERT YOUR TOKEN FROM SLACK HERE.  This is the token from your slack team channel when you created the Slack app integration.
+var token = "97zwleASUq3M0FZSjnv9tOON"; // INSERT YOUR TOKEN FROM SLACK HERE.  This is the token from your slack team channel when you created the Slack app integration.
 
 
 var endpoint = new AWS.Endpoint(API.endpoint);
